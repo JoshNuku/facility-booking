@@ -1,0 +1,19 @@
+{
+  "name": "Campus Facility Booking",
+  "short_name": "Bookings",
+  "description": "Book campus facilities quickly and easily",
+  "start_url": "/api/v1/login.html",
+  "scope": "/api/v1/",
+  "display": "standalone",
+  "background_color": "#f0f2f5",
+  "theme_color": "#4f46e5",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/api/v1/icon.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any"
+    }
+  ]
+}

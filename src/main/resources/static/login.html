@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <meta name="theme-color" content="#4f46e5" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <title>Campus Facility Booking</title>
+    <link rel="manifest" href="/api/v1/manifest.json" />
+    <link rel="icon" href="/api/v1/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/api/v1/icon.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700&family=Roboto:wght@400;500;700&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="/api/v1/styles.css" />
+</head>
+<body class="auth-page">
+
+<div class="auth-container">
+    <div class="auth-card">
+        <div class="auth-header">
+            <div class="auth-logo">🏛️</div>
+            <h1 class="auth-title">Campus Booking</h1>
+            <p class="auth-subtitle">Book campus facilities quickly and easily</p>
+        </div>
+
+        <div class="auth-tabs">
+            <button type="button" class="auth-tab active" data-tab="signin">Sign In</button>
+            <button type="button" class="auth-tab" data-tab="signup">Sign Up</button>
+        </div>
+
+        <!-- Sign In Form -->
+        <form id="signin-form" class="auth-form">
+            <div class="form-group">
+                <label for="signin-email">Email Address</label>
+                <input type="email" id="signin-email" placeholder="you@university.edu" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+                <label for="signin-password">Password</label>
+                <input type="password" id="signin-password" placeholder="Enter your password" required autocomplete="current-password" />
+            </div>
+            <button type="submit" class="auth-submit-btn">Sign In</button>
+            <p id="signin-message" class="auth-message"></p>
+        </form>
+
+        <!-- Sign Up Form -->
+        <form id="signup-form" class="auth-form" hidden>
+            <div class="form-group">
+                <label for="signup-name">Full Name</label>
+                <input type="text" id="signup-name" placeholder="John Doe" required autocomplete="name" />
+            </div>
+            <div class="form-group">
+                <label for="signup-email">Email Address</label>
+                <input type="email" id="signup-email" placeholder="you@university.edu" required autocomplete="email" />
+            </div>
+            <div class="form-group">
+                <label for="signup-password">Password</label>
+                <input type="password" id="signup-password" placeholder="Create a password" required minlength="4" autocomplete="new-password" />
+            </div>
+            <div class="form-group">
+                <label for="signup-role">I am a</label>
+                <select id="signup-role" required>
+                    <option value="STUDENT">Student</option>
+                    <option value="STAFF">Staff</option>
+                </select>
+            </div>
+            <button type="submit" class="auth-submit-btn">Create Account</button>
+            <p id="signup-message" class="auth-message"></p>
+        </form>
+    </div>
+
+    <p class="auth-footer">Campus Facility Booking &copy; 2026</p>
+</div>
+
+<script src="/api/v1/api.js"></script>
+<script src="/api/v1/app-auth.js"></script>
+</body>
+</html>
